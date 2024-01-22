@@ -7,7 +7,7 @@
 
   /*========== Colors ==========*/
 
-  --first-color: rgba(112, 59, 247, 1);
+  --first-color: hsl(112, 59, 247, 1);
   --first-color-alt: rgba(228, 100%, 33%);
   --first-color-light: hsl(228, 62%, 59%);
   --first-color-lighten: hsl(228, 100%, 97%);
