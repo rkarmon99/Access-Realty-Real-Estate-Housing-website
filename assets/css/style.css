@@ -377,27 +377,29 @@ nav__logo:hover {
   justify-content: center;
 }
 
-.home__orbe {
-  width: 265px;
-  height: 284px;
-  background: linear-gradient(180deg,
-      hsl(0, 0%, 16%) 93%,
-      hsl(0, 0%, 67%) 100%);
-  border-radius: 135px 135px 0 0;
+.home__square {
+  width: 380px;
+  height: 380px;
+  background-color: var(--first-color);
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  border-radius: .75rem;
+  z-index: var(--z-back);
+
 
 }
+
+
 
 .home__img {
-  position: absolute;
-  width: 250px;
+  width: 300px;
   height: 300px;
-  overflow: hidden;
-  border-radius: 125px 125px 12px 12px;
-  display: inline-flex;
-  align-items: flex-end;
-  bottom: -1, 5rem;
-  box-shadow: 0px 16px 32px hsla(228, 66%, 25%, .25);
+  object-fit: cover;
 }
+
+
+
 
 /*=============== ABOUT US ===============*/
 .about__container {
@@ -594,7 +596,7 @@ nav__logo:hover {
   justify-content: center;
 }
 
-.value__orbe {
+.value__square {
   width: 266px;
   height: 316px;
   background-color: hsl(228, 24%, 97%);
@@ -602,14 +604,11 @@ nav__logo:hover {
 }
 
 .value__img {
-  position: absolute;
+  width: 300px;
   height: 300px;
-  width: 250px;
-  overflow: hidden;
-  border-radius: 125px 125px 12px 12px;
-  inset: 0;
-  margin: auto;
-  box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+  object-fit: cover;
+
+
 }
 
 .value__description {
@@ -710,12 +709,7 @@ nav__logo:hover {
   justify-content: center;
 }
 
-.contact__orbe {
-  width: 266px;
-  height: 316px;
-  background-color: hsl(228, 24%, 97%);
-  border-radius: 135px 135px 16px 16px;
-}
+
 
 .contact__img {
   position: absolute;
@@ -960,6 +954,11 @@ nav__logo:hover {
 
   .home {
     padding-bottom: 0;
+
+  }
+
+  .value__container {
+    padding-bottom: 3rem;
 
   }
 
@@ -1334,3 +1333,5 @@ nav__logo:hover {
 }
 
 /* For 2K & 4K resolutions */
+
+@media screen and (min-width:1440px)
