@@ -130,7 +130,6 @@ const sr = ScrollReveal({
   duration: 2500,
   delay: 400,
   reset: true,
-
 });
 
 sr.reveal(
