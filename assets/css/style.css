@@ -1276,6 +1276,28 @@ nav__logo:hover {
     height: 264px;
   }
 
+  .property__images{
+    padding-bottom: 3rem;
+  }
+  .property__img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  .property__square{
+    width: 240px;
+    height: 264px;
+  }
+  .property__description{
+    padding: 0;
+  }
+  .property__information-list{
+    padding: 0;
+  }
+  
+
+
+  
   .sellers__container{
     padding-bottom: 3rem;
   }
@@ -1322,9 +1344,6 @@ nav__logo:hover {
   
 
   
-
-
-  
   .logos__image img {
     height: 100px;
   }
@@ -1337,18 +1356,8 @@ nav__logo:hover {
 
   
 
-  .buyers__img,
-  .contact__img {
-    width: 461px;
-    height: 601px;
-    border-radius: 10px 100px / 120px;
-  }
+  
 
-  .buyers__img img,
-  .contact__img img {
-    max-width: initial;
-    width: 490px;
-  }
 
   .buyers__description,
   .contact__description {
@@ -1490,8 +1499,14 @@ nav__logo:hover {
     padding-bottom: 3rem;
   }
   .buyers__square{
-    width: 240px;
-    height: 264px;
+    width: 300px;
+    height: 300px;
+  }
+  .buyers__img,
+  .contact__img{
+    width: 320px;
+    height: 360px;
+    
   }
 
 }
