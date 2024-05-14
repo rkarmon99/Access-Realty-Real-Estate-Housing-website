@@ -24,15 +24,10 @@ var swiperPopular = new Swiper(".popular__container", {
 
 
 
-
-
-
-
-
-/*=============== VALUE ACCORDION ===============*/
-const accordionItems = document.querySelectorAll(".value__accordion-item");
+/*=============== BUYERS ACCORDION ===============*/
+const accordionItems = document.querySelectorAll(".buyers__accordion-item");
 accordionItems.forEach((item) => {
-  const accordionHeader = item.querySelector(".value__accordion-header");
+  const accordionHeader = item.querySelector(".buyers__accordion-header");
   accordionHeader.addEventListener("click", () => {
     const openItem = document.querySelector("accordion-open");
     toggleItem(item);
@@ -43,7 +38,7 @@ accordionItems.forEach((item) => {
 });
 
 const toggleItem = (item) => {
-  const accordionContent = item.querySelector(".value__accordion-content");
+  const accordionContent = item.querySelector(".buyers__accordion-content");
 
   if (item.classList.contains("accordion-open")) {
     accordionContent.removeAttribute("style");
@@ -160,3 +155,22 @@ sr.reveal(".footer__social", { origin: "bottom" });
 document.querySelector('.inquiry-type-icon').addEventListener('click', function() {
   document.querySelector('.inquiry-type-dropdown').click();
 });
+
+const pollOptions = document.querySelectorAll(".option");
+const resultsElement = document.getElementById("results");
+let votes = { "red": 0, "green": 0, "blue": 0 };
+pollOptions.forEach(option => {
+  option.addEventListener("click", () => {
+    const chosenOption = option.dataset.option;
+    votes[chosenOption]++;
+    updateResults();
+  });
+});
+function updateResults() {
+  let resultsText = "Current votes: ";
+  for (const color in votes) {
+    resultsText += `${color}: ${votes[color]}, `;
+  }
+  resultsText = resultsText.slice(0, -2); // Remove the trailing comma and space
+  resultsElement.textContent = resultsText;
+}
