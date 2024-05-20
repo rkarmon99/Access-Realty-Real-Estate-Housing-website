@@ -8,18 +8,6 @@ const scrollHeader = () => {
 };
 window.addEventListener("scroll", scrollHeader);
 
-/*=============== SWIPER POPULAR ===============*/
-var swiperPopular = new Swiper(".popular__container", {
-  spaceBetween: 32,
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
 
 
 
@@ -174,3 +162,4 @@ function updateResults() {
   resultsText = resultsText.slice(0, -2); // Remove the trailing comma and space
   resultsElement.textContent = resultsText;
 }
+

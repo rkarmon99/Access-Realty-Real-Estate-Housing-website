@@ -137,7 +137,7 @@ body.dark-theme {
 
 .dark-theme .nav__menu,
 .dark-theme .nav__img,
-.dark-theme .popular__card:hover,
+
 .dark-theme .value__img,
 .dark-theme .accordion-open,
 .dark-theme .accordion-open .value__accordion-icon,
@@ -166,9 +166,10 @@ body.dark-theme {
   color: var(--text-color);
 }
 
-.dark-theme .nav__logo{
+.dark-theme .nav__logo {
   color: var(--first-color);
 }
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
@@ -344,7 +345,7 @@ nav__logo:hover {
   width: 90%;
   background-color: var(--body-color);
   color: var(--text-color);
-  margin:  0.5rem;
+  margin: 0.5rem;
 }
 
 .home__search-input ::placeholder {
@@ -371,69 +372,12 @@ nav__logo:hover {
   font-size: var(--smaller-font-size);
 }
 
-.home__images {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  top: -10px;     
 
-  
 
-}
 
-.home__square {
-  width: 300px;
-  height: 300px;
-  background-color: hsl(240, 94%, 48%);
-  border-radius: 10px 100px/ 120px;
-  position: relative;
-  top: -10px;
-}
 
-.home__img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  position: relative;
-  border-radius: 10px 100px / 120px;
-  overflow: hidden;
-  box-shadow: 0 16px 32px hsla(228, 66%, 25%, 0.25);
-}
 
-/*=============== ABOUT US ===============*/
-.about__container {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  gap: 5rem;
-}
 
-.about__description {
-  color: var(--text-color-light);
-  margin-bottom: 2rem;
-}
-
-.about__images {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.about__square {
-  width: 266px;
-  height: 316px;
-  background-color: hsl(240, 94%, 48%);
-  border-radius: 10px 100px/ 120px;
-}
-
-.about__img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  position: absolute;
-  border-radius: 10px 100px / 120px;
-  overflow: hidden;
-  box-shadow: 0 16px 32px hsla(228, 66%, 25%, 0.25);
-}
 
 
 
@@ -500,11 +444,12 @@ nav__logo:hover {
 }
 
 /*=============== PROPERTY ===============*/
-.property__container{
+.property__container {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-.property__card{
+
+.property__card {
   position: relative;
   background-color: var(--container-color);
   padding: 1.5rem;
@@ -513,7 +458,7 @@ nav__logo:hover {
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, 0.25);
 }
 
-.property__images{
+.property__images {
   position: relative;
   display: flex;
   justify-content: center;
@@ -524,11 +469,11 @@ nav__logo:hover {
   height: 316px;
   background-color: hsl(228, 24%, 97%);
   border-radius: 135px 135px 16px 16px;
-  
-  
+
+
 }
 
-.property__img{
+.property__img {
   width: 100%;
   height: 250px;
   object-fit: cover;
@@ -538,7 +483,7 @@ nav__logo:hover {
   box-shadow: fit;
 }
 
-.property__data{
+.property__data {
   padding: 1rem 0;
 }
 
@@ -664,13 +609,14 @@ nav__logo:hover {
   justify-content: center;
 }
 
-.sellers__square{
+.sellers__square {
   width: 266px;
   height: 316px;
   background-color: hsl(228, 24%, 97%);
   border-radius: 10px 100px/ 120px;
 }
-.sellers__img{
+
+.sellers__img {
   width: 100%;
   height: 300px;
   object-fit: fill;
@@ -690,40 +636,45 @@ nav__logo:hover {
   margin-bottom: 1rem;
 }
 
-.sellers__information-description{
+.sellers__information-description {
   font-size: var(--small-font-size);
   margin-bottom: 1.25rem;
 }
-.sellers__information-description span{
+
+.sellers__information-description span {
   color: var(--second-color);
 }
-.sellers__information-list{
+
+.sellers__information-list {
   display: grid;
   row-gap: 0.75rem;
 
 }
-.sellers__information-item{
+
+.sellers__information-item {
   display: flex;
   align-items: center;
 }
-.sellers__information-icon{
+
+.sellers__information-icon {
   font-size: 1.25rem;
   color: var(--first-color);
   margin-right: 0.25rem;
 }
-.sellers__information-item span{
+
+.sellers__information-item span {
   font-size: var(--small-font-size);
 }
 
 
 
 /*=============== CONTACT ===============*/
-.contact__container{
+.contact__container {
   row-gap: 3rem;
-}  
+}
 .contact__information{
-  background-color: var(--container-color);
-  padding: 2rem;
+  background-color: var(--body-color);
+  padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, 0.25);
 }
@@ -969,18 +920,28 @@ nav__logo:hover {
   .home {
     padding-bottom: 0;
   }
-  .home__container{
+
+  .home__container {
     grid-template-columns: minmax(0, 80%);
   }
-  
+
 
   .buyers__container {
     padding-bottom: 3rem;
   }
 
+  .sellers__container {
+    padding-bottom: 3rem;
+  }
+  .contact_container {
+    grid-template-columns: minmax(0, 80%);
+  }
   .contact__card {
     grid-template-columns: repeat(1, 180px);
     justify-content: center;
+  }
+  .contact__button {
+    margin-top: 1.5rem;
   }
 }
 
@@ -998,83 +959,58 @@ nav__logo:hover {
     object-fit: fil;
   }
 
-  .home__square {
-    width: 240px;
-    height: 264px;
-  }
-
-  .about__img{
-    width: 200px;
-    object-fit: cover;
-  }
-  .about__container{
-    padding-bottom: 3rem;
-  }
-  .about__data{
-    padding: 1rem 0;
-  }
-  .about__description{
-    padding: 0;
-  }
-  .about__img{
-    width: 200px;
-    object-fit: cover;
-  }
-
-  .about__square{
-    width: 240px;
-    height: 264px; 
-  }
-  .sellers__container{
-    padding-bottom: 3rem;
-  }
-  .sellers__square{
-    width: 240px;
-    height: 264px;
-  }
-
-  .sellers__description{
-    padding: 0;
-  }
-  .sellers__img{
-    width: 200px;
-    height: 200px;
-  }
-  .sellers__information-list{
-    padding: 0;
-  }
-  .sellers__information-item{
-    padding: 0;
-  }
-
-  .property__img{
-    width: 200px;
-    height: 200px;
-  }
-
-  .property__square{
-    width: 240px;
-    height: 264px;
-  }
   
+
+  
+
+  .sellers__container {
+    padding-bottom: 3rem;
+  }
+
+  .sellers__square {
+    width: 240px;
+    height: 264px;
+  }
+
+  .sellers__description {
+    padding: 0;
+  }
+
+  .sellers__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sellers__information-list {
+    padding: 0;
+  }
+
+  .sellers__information-item {
+    padding: 0;
+  }
+
+  
+
 
   .buyers__img,
   .contact__img {
     width: 220px;
     height: 260px;
   }
-  
+
 
   .buyers__square,
   .contact__square {
     width: 236px;
     height: 280px;
   }
-  .contact__card{
+
+  .contact__card {
     grid-template-columns: repeat(1, 180px);
     justify-content: center;
   }
-  .contact__container{
+
+  .contact__container {
     padding-bottom: 3rem;
   }
 
@@ -1233,12 +1169,7 @@ nav__logo:hover {
     column-gap: 3.5rem;
   }
 
-  .home__square {
-    width: 266px;
-    height: 316px;
-    background-color: hsl(228, 24%, 97%);
-    border-radius: 10px 100px/ 120px;
-  }
+ 
 
   .home__images {
     position: relative;
@@ -1246,104 +1177,73 @@ nav__logo:hover {
     justify-content: center;
   }
 
-  .home__img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    position: absolute;
-    border-radius: 10px 100px / 120px;
-    overflow: hidden;
-    box-shadow: 0 16px 32px hsla(228, 66%, 25%, 0.25);
-  }
-
-  .about,
-  .about__container{
-    padding-bottom: 3rem;
-  }
-  
-  .about__data{
-    padding: 1rem 0;
-  }
-  .about__description{
-    padding: 0;
-  }
-  .about__img{
-    width: 200px;
-    object-fit: cover;
-  }
-  .about__square{
-    width: 240px;
-    height: 264px;
-  }
-
-  .property__images{
-    padding-bottom: 3rem;
-  }
-  .property__img{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-  }
-  .property__square{
-    width: 240px;
-    height: 264px;
-  }
-  .property__description{
-    padding: 0;
-  }
-  .property__information-list{
-    padding: 0;
-  }
-  
-
-
-  
-  .sellers__container{
-    padding-bottom: 3rem;
-  }
-  .sellers__square{
-    width: 240px;
-    height: 264px;
-  }
-
-  .sellers__description{
-    padding: 0;
-  }
-
-  .sellers__img{
-    width: 200px;
-    height: 200px;
-  }
-
-  .sellers__information-list{
-    padding: 0;  
+  .home__img{
+    width: 420px;
+    height: 420px;
+   margin-bottom: 70px;
     
   }
-  .sellers__information-item{
-    padding: 0;
-  }
-  .buyers__container{
+
+  
+
+
+
+  
+
+
+
+
+  .sellers__container {
     padding-bottom: 3rem;
   }
-  .buyers__square{
+
+  .sellers__square {
+    width: 240px;
+    height: 264px;
+  }
+
+  .sellers__description {
+    padding: 0;
+  }
+
+  .sellers__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sellers__information-list {
+    padding: 0;
+
+  }
+
+  .sellers__information-item {
+    padding: 0;
+  }
+
+  .buyers__container {
+    padding-bottom: 3rem;
+  }
+
+  .buyers__square {
     width: 240px;
     height: 264px;
   }
 
   .buyers__img,
-  .contact__img{
+  .contact__img {
     width: 220px;
     height: 260px;
   }
+
   .buyers__square,
-  .contact__square{
+  .contact__square {
     width: 236px;
     height: 280px;
     border-radius: 10px 100px / 120px;
   }
-  
 
-  
+
+
   .logos__image img {
     height: 100px;
   }
@@ -1354,9 +1254,9 @@ nav__logo:hover {
     column-gap: 5rem;
   }
 
-  
 
-  
+
+
 
 
   .buyers__description,
@@ -1440,73 +1340,57 @@ nav__logo:hover {
     padding-bottom: 5rem;
   }
 
-  .home__img {
-    width: 472px;
-    height: 634px;
-  }
+ 
 
-  .home__square {
-    width: 504px;
-    height: 611px;
-  }
+  
 
-  .home__img img {
-    width: 490px;
-  }
+  
 
-  .home__square img {
-    width: 520px;
-    height: 651px;
-  }
-  .about__container {
-    column-gap: 4rem;
-  }
-  .about__data{
-    padding: 1rem 0;
-  }
-  .about__description{
-    padding: 0;
-  }
-  .about__img{
-    width: 200px;
-    object-fit: cover;
-  }
-  .about__square{
-    width: 240px;
-    height: 264px;
-  }
-  .sellers__container{
+  
+
+  
+
+  .sellers__container {
     padding-bottom: 3rem;
   }
-  .sellers__square{
+
+  .sellers__square {
     width: 240px;
     height: 264px;
   }
-  .sellers__description{
+
+  .sellers__description {
     padding: 0;
   }
-  .sellers__img{
+
+  .sellers__img {
     width: 200px;
     height: 200px;
   }
-  .sellers__information-list{
+
+  .sellers__information-list {
     padding: 0;
   }
-  .sellers__information-item{
+
+  .sellers__information-item {
     padding: 0;
   }
-  .buyers__container{
+
+  .buyers__container {
     padding-bottom: 3rem;
   }
-  .buyers__square{
+
+  .buyers__square {
     width: 300px;
     height: 300px;
   }
+
   .buyers__img,
-  .contact__img{
+  .contact__img {
     width: 320px;
     height: 360px;
-    
+
   }
+  
 
 }
