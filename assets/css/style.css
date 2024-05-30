@@ -458,20 +458,8 @@ nav__logo:hover {
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, 0.25);
 }
 
-.property__images {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.property__square {
-  width: 266px;
-  height: 316px;
-  background-color: hsl(228, 24%, 97%);
-  border-radius: 135px 135px 16px 16px;
 
 
-}
 
 .property__img {
   width: 100%;
@@ -481,33 +469,47 @@ nav__logo:hover {
   border-radius: 10px 100px / 120px;
   overflow: hidden;
   box-shadow: fit;
+  transition: 0.3s;
+  align-items: center;
 }
 
-.property__data {
-  padding: 1rem 0;
+
+
+.property__data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.property__title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 0.25rem;
 }
 
 
 
-/*=============== BUYERS ===============*/
-.buyers__container {
+
+
+
+
+
+
+/*=============== BUYING ===============*/
+.buying__container {
   row-gap: 3rem;
 }
 
-.buyers__images {
+.buying__images {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.buyers__square {
-  width: 266px;
-  height: 316px;
-  background-color: hsl(228, 24%, 97%);
-  border-radius: 10px 100px/ 120px;
-}
-
-.buyers__img {
+.buying__img {
   width: 100%;
   height: 300px;
   object-fit: contain;
@@ -517,69 +519,16 @@ nav__logo:hover {
   box-shadow: 0 16px 32px hsla(228, 66%, 25%, 0.25);
 }
 
-.buyers__description {
+.buying__description {
   font-size: var(--small-font-size);
   margin-bottom: 2.5rem;
 }
 
-.buyers__accordion {
-  display: grid;
-  row-gap: 1.5rem;
-}
 
 
-.buyers__accordion-item {
-  background-color: var(--body-color);
-  border: 2px solid var(--border-color);
-  border-radius: 0.5rem;
-  padding: 1rem 0.75rem;
-}
 
-.buyers__accordion-header {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
 
-.buyers__accordion-icon {
-  background-color: var(--first-color-lighten);
-  padding: 5px;
-  border-radius: 0.25rem;
-  font-size: 18px;
-  color: var(--first-color);
-  margin-right: 0.75rem;
-  transition: 0.3s;
-}
 
-.buyers__accordion-title {
-  font-size: var(--small-font-size);
-}
-
-.buyers__accordion-arrow {
-  display: inline-flex;
-  background-color: var(--first-color-lighten);
-  padding: 0.25rem;
-  color: var(--first-color);
-  border-radius: 2px;
-  font-size: 10px;
-  margin-left: auto;
-  transition: 0.3s;
-}
-
-.buyers__accordion-arrow i {
-  transition: 0.4s;
-}
-
-.buyers__accordion-description {
-  font-size: var(--smaller-font-size);
-  padding: 1.25rem 2.5rem 0 2.75rem;
-}
-
-.buyers__accordion-content {
-  overflow: hidden;
-  height: 0;
-  transition: all 0.25s ease;
-}
 
 /*Rotate icon and add shadows*/
 .accordion-open {
@@ -678,7 +627,36 @@ nav__logo:hover {
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, 0.25);
 }
-
+.contact__information-title{
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+}
+.contact_content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact__form{
+  width: 45%;
+}
+.contact__form-input{
+  width: 100%;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 3px solid var(--text-color-light);
+  font-size: var(--normal-font-size);
+}
+.contact__form-input::placeholder{
+  color: var(--text-color-light);
+}
+.contact__form-message{
+  height: 6.25rem;
+  resize: none;
+}
+.contact__form-button
 
 
 
@@ -712,7 +690,7 @@ nav__logo:hover {
   color: var(--text-color);
 }
 
-.footer__social {
+.footer__social{
   display: flex;
   column-gap: 1rem;
 }
@@ -924,12 +902,29 @@ nav__logo:hover {
   .home__container {
     grid-template-columns: minmax(0, 80%);
   }
-
-
-  .buyers__container {
-    padding-bottom: 3rem;
+  .home__img {
+    width: 200px;
+    height: 200px;
   }
+  .home__data {
+    padding-top: 3rem;
+  }
+  
+  .buying__container{
+    grid-template-columns: minmax(0, 80%);
+  }
+  .buying__img{
+    width: 200px;
+    height: 200px;
+  }
+  .buying__description{
+    font-size: var(--small-font-size);
+    margin-bottom: 2.5rem;
+    
+  }
+  
 
+  
   .sellers__container {
     padding-bottom: 3rem;
   }
@@ -992,18 +987,7 @@ nav__logo:hover {
   
 
 
-  .buyers__img,
-  .contact__img {
-    width: 220px;
-    height: 260px;
-  }
-
-
-  .buyers__square,
-  .contact__square {
-    width: 236px;
-    height: 280px;
-  }
+  
 
   .contact__card {
     grid-template-columns: repeat(1, 180px);
@@ -1058,11 +1042,7 @@ nav__logo:hover {
     padding-bottom: 2rem;
   }
 
-  .buyers__container,
-  .contact__container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-  }
+  
 
   .contact__images {
     order: 1;
@@ -1220,27 +1200,8 @@ nav__logo:hover {
     padding: 0;
   }
 
-  .buyers__container {
-    padding-bottom: 3rem;
-  }
-
-  .buyers__square {
-    width: 240px;
-    height: 264px;
-  }
-
-  .buyers__img,
-  .contact__img {
-    width: 220px;
-    height: 260px;
-  }
-
-  .buyers__square,
-  .contact__square {
-    width: 236px;
-    height: 280px;
-    border-radius: 10px 100px / 120px;
-  }
+  
+  
 
 
 
@@ -1248,11 +1209,7 @@ nav__logo:hover {
     height: 100px;
   }
 
-  .buyers__container,
-  .contact__container {
-    align-items: flex-start;
-    column-gap: 5rem;
-  }
+  
 
 
 
@@ -1265,18 +1222,7 @@ nav__logo:hover {
     margin-bottom: 2.5rem;
   }
 
-  .buyers__accordion-title {
-    font-size: var(--normal-font-size);
-  }
-
-  .buyers__accordion-item {
-    padding: 1.25rem 1.25rem 1.25rem 1;
-  }
-
-  .buyers__accordion-description {
-    padding-bottom: 1rem;
-    font-size: var(--small-font-size);
-  }
+  
 
   .contact__card {
     grid-template-columns: repeat(2, 200px);
@@ -1376,21 +1322,7 @@ nav__logo:hover {
     padding: 0;
   }
 
-  .buyers__container {
-    padding-bottom: 3rem;
-  }
-
-  .buyers__square {
-    width: 300px;
-    height: 300px;
-  }
-
-  .buyers__img,
-  .contact__img {
-    width: 320px;
-    height: 360px;
-
-  }
+  
   
 
 }
