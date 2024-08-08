@@ -12,30 +12,6 @@ window.addEventListener("scroll", scrollHeader);
 
 
 
-/*=============== BUYERS ACCORDION ===============*/
-const accordionItems = document.querySelectorAll(".buyers__accordion-item");
-accordionItems.forEach((item) => {
-  const accordionHeader = item.querySelector(".buyers__accordion-header");
-  accordionHeader.addEventListener("click", () => {
-    const openItem = document.querySelector("accordion-open");
-    toggleItem(item);
-    if (openItem && openItem !== item) {
-      toggleItem(openItem);
-    }
-  });
-});
-
-const toggleItem = (item) => {
-  const accordionContent = item.querySelector(".buyers__accordion-content");
-
-  if (item.classList.contains("accordion-open")) {
-    accordionContent.removeAttribute("style");
-    item.classList.remove("accordion-open");
-  } else {
-    accordionContent.style.height = accordionContent.scrollHeight + "px";
-    item.classList.add("accordion-open");
-  }
-};
 
 
 
@@ -46,27 +22,26 @@ const toggleItem = (item) => {
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll('section[id]')
 
-const scrollActive = () => {
-  const scrollY = window.pageYOffset;
+const scrollActive = () =>{
+    const scrollY = window.pageYOffset
 
-  sections.forEach((current) => {
+  sections.forEach(current =>{
     const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 58,
-      sectionId = current.getAttribute("id"),
-      sectionsClass = document.querySelector(
-        ".nav__menu a[href*=" + sectionId + "]"
-      );
+        sectionTop = current.offsetTop - 58,
+        sectionId = current.getAttribute('id'),
+        sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      sectionsClass.classList.add("active-link");
-    } else {
-      sectionsClass.classList.remove("active-link");
-    }
-  });
-};
-window.addEventListener("scroll", scrollActive);
+    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+      sectionsClass.classList.add('active-link')
+    }else{
+      sectionsClass.classList.remove('active-link')
+    }                                                    
+  })
+}
+window.addEventListener('scroll', scrollActive)
+
 
 /*=============== DARK LIGHT THEME ===============*/
 const themeButton = document.getElementById("theme-button");

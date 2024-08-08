@@ -6,19 +6,21 @@
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  --first-color: rgb(14, 180, 0) --first-color-light: hsl(258, 87%, 67%);
+
+  --first-color: hsl(192, 58%, 22%);
+  --first-color-light: hsl(228, 62%, 59%);
   --first-color-lighten: hsl(228, 100%, 97%);
-  --second-color: hsl(258, 96%, 35%);
-  --title-color: hsl(228, 100%, 40%);
-  --text-color: hsl(228, 15%, 50%);
-  --text-color-light: hsl(228, 12%, 75%);
+  --title-color: hsl(194, 76%, 36%);
+  --second-color: hsl(194, 21%, 55%);
+  --text-color: hsl(240, 100%, 49%);
+  --text-color-light: hsl(0, 0%, 85%);
   --border-color: hsl(228, 99%, 98%);
-  --body-color: #fff;
-  --container-color: #fff;
+  --body-color: #ffffff;
+  --container-color: #d3e2e7;
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
-  --biggest-font-size: 2.25rem;
+  --biggest-font-size: 3.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -61,8 +63,8 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
+  background-color: var(--first-color);
+  color: var(--second-color);
   transition: 0.3s;
 }
 
@@ -73,7 +75,10 @@ h3 {
 }
 
 h2 {
-  color: var(--second-color);
+  color: var();
+}
+p {
+  color: var();
 }
 
 ul {
@@ -99,7 +104,7 @@ button {
 /*=============== THEME ===============*/
 .change-theme {
   font-size: 1.25rem;
-  color: #fff;
+  color: #000000;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -110,13 +115,13 @@ button {
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --first-color: hsl(258, 77%, 65%);
-  --first-color-alt: hsl(258, 77%, 65%);
-  --second-color: hsl(0, 0%, 100%);
-  --title-color: hsl(228, 8%, 95%);
-  --text-color: hsl(0, 0%, 96%);
+  --first-color: rgb(176, 190, 197)
+  --first-color-alt: hsl(299, 100%, 39%);
+  --second-color: hsl(206, 96%, 19%);
+  --title-color: hsl(210, 79%, 54%);
+  --text-color: hsl(195, 98%, 68%);
   --border-color: hsl(228, 16%, 14%);
-  --body-color: hsl(228, 12%, 8%);
+  --body-color: hsl(198, 90%, 28%);
   --container-color: hsl(228, 16%, 12%);
 }
 
@@ -124,6 +129,9 @@ body.dark-theme {
     Color changes in some parts of 
     the website
 ==========*/
+.dark-theme .home__container {
+  background-color: var(--container-color);
+}
 .dark-theme .home__search,
 .dark-theme .swiper-button-next,
 .dark-theme .swiper-button-prev {
@@ -176,7 +184,7 @@ body.dark-theme {
 }
 
 .section__title span {
-  color: var(--second-color);
+  color: var(--container-color);
 }
 
 .section__subtitle {
@@ -196,6 +204,7 @@ body.dark-theme {
   top: 0;
   left: 0;
   width: 100%;
+  height: 15%;
   background-color: transparent;
   z-index: var(--z-fixed);
   transition: 0.4s;
@@ -206,11 +215,10 @@ body.dark-theme {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--first-color);
 }
 
 .nav__logo {
-  color: var(--body-color);
-  ;
   display: inline-flex;
   align-items: center;
   column-gap: 0.25rem;
@@ -265,7 +273,7 @@ nav__logo:hover {
 
 /* Change background header */
 .scroll-header {
-  background-color: var(--body-color);
+  background-color: var(--second-color);
   box-shadow: 0 1px 4px hsla(228, 4%, 15%, 0.1);
 }
 
@@ -279,10 +287,11 @@ nav__logo:hover {
 
 /* Active link */
 .active-link {
-  background: linear-gradient(101deg hsl(258, 77%, 65%), hsl(258, 77%, 65%));
-  color: #fff;
+  background: linear-gradient(101deg hsl(228, 66%, 53%), hsl(228, 66%, 47%));
+  color: #7a7a7a;
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, 0.25);
 }
+
 
 /*=============== HOME ===============*/
 .home {
@@ -291,6 +300,7 @@ nav__logo:hover {
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 0;
+  background-color:var(--container-color);
 }
 
 .home__container {
@@ -308,7 +318,15 @@ nav__logo:hover {
   font-size: var(--biggest-font-size);
   margin-bottom: 1.5rem;
 }
+.home__img{
+  position: relative;
+  top: 70px; left: 70px;
+}
 
+.nav__logo{
+  position: relative;
+  top: 20px; bottom: -50px;
+}
 
 
 
@@ -332,7 +350,7 @@ nav__logo:hover {
 .button {
   display: inline-block;
   background: linear-gradient(101deg, var(--first-color-light), hsl(228, 68%, 47%));
-  color: #fff;
+  color: var(--first-color);
   padding: 14px 28px;
   border-radius: 0.5rem;
   font-size: var(--normal-font-size);
@@ -481,7 +499,7 @@ nav__logo:hover {
 .sellers__square {
   width: 266px;
   height: 316px;
-  background-color: hsl(228, 24%, 97%);
+  background-color: var(--container-color);
   border-radius: 10px 100px/ 120px;
 }
 
@@ -862,7 +880,7 @@ input[type=submit]:hover {
     justify-content: center;
     flex-wrap: wrap;
     padding: 40px 0;
-    
+
   }
   .team__row-4{
     display: flex;
@@ -871,7 +889,7 @@ input[type=submit]:hover {
     padding: 40px 0;
 
   }
-  
+
 
 
 
@@ -922,9 +940,9 @@ input[type=submit]:hover {
   .nav__menu {
     width: 325px;
   }
-  
-  
-  
+
+
+
   .home__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -997,8 +1015,41 @@ input[type=submit]:hover {
     grid-template-columns: repeat(3, max-content);
   }
 }
+/* For desktop devices */
+@media screen and (min-width: 768px) {
 
-@media screen and (min-width: 767px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav__menu{
+    width: 800px;
+
+  }
+  .nav__list {
+    display: flex;
+    padding-top: initial;
+  }
+  .nav__item{
+    margin-left: 6rem;
+  }
+  .nav__toggle{
+    display: none;
+  }
+
+  .section {
+    padding: 7.5rem 0 1rem;
+  }
+
+  .section__title {
+    font-size: 2.25rem;
+  }
+
+  .section__subtitle {
+    font-size: var(--normal-font-size);
+  }
+
   .home__container {
     grid-template-columns: repeat(2, 1fr);
     padding-top: 2rem;
@@ -1010,6 +1061,15 @@ input[type=submit]:hover {
 
   .home__data {
     padding-bottom: 2rem;
+  }
+
+  .home__img{
+    width: 600px;
+    height: 600px;
+  }
+  .img{
+    width: 600px;
+    height: 600px;
   }
 
   .team__row-1 {
@@ -1053,30 +1113,63 @@ input[type=submit]:hover {
 
 /* For large devices */
 
+@media screen and (min-width: 1024px){
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  .section {
+    padding: 10rem 0 2rem;
+  }
 
-@media screen and (min-width: 1040px) {
-  
+  .section__title {
+    font-size: 3rem;
+  }
 
+  .section__subtitle {
+    font-size: var(--normal-font-size);
+  }
+
+  .home__container {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 2rem;
+  }
+
+  .home__square {
+    align-self: flex-end;
+  }
+
+  .home__data {
+    padding-bottom: 2rem;
+  }
+
+  .home__img{
+    position: relative;
+    width: 2600px;
+    height: 1600px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .container {
     margin-left: auto;
     margin-right: auto;
   }
 
   .nav__menu{
-    width: initial;
+    width: 800px;
   }
   .nav__list {
     display: flex;
     padding-top: initial;
   }
   .nav__item{
-    margin-left: 3rem;
+    margin-left: 6rem;
   }
   .nav__toggle{
     display: none;
   }
-  
 
   .section {
     padding: 7.5rem 0 1rem;
@@ -1092,18 +1185,22 @@ input[type=submit]:hover {
 
   .home__container {
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 2rem;
+    padding-top: 5rem;
   }
 
   .home__data {
-    padding-bottom: 4rem;
+    padding-bottom: 9rem;
   }
 
   .home__img {
-    width: 800px;
-    height: 800px;
-    align-content: ;
+    width: 3800px;
+    height: 2000px;
+    text-align: left;
+    display:block;
+
   }
+
+
 
   .team {
     padding-bottom: 0;
@@ -1137,6 +1234,7 @@ input[type=submit]:hover {
     padding: 40px 0;
 
   }
+
 
 
 
