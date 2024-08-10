@@ -77,6 +77,7 @@ h3 {
 h2 {
   color: var();
 }
+
 p {
   color: var();
 }
@@ -104,7 +105,7 @@ button {
 /*=============== THEME ===============*/
 .change-theme {
   font-size: 1.25rem;
-  color: #000000;
+  color: #ffffff;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -115,11 +116,10 @@ button {
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --first-color: rgb(176, 190, 197)
-  --first-color-alt: hsl(299, 100%, 39%);
+  --first-color: rgb(176, 190, 197);
   --second-color: hsl(206, 96%, 19%);
   --title-color: hsl(210, 79%, 54%);
-  --text-color: hsl(195, 98%, 68%);
+  --text-color: hsl(195, 41%, 46%);
   --border-color: hsl(228, 16%, 14%);
   --body-color: hsl(198, 90%, 28%);
   --container-color: hsl(228, 16%, 12%);
@@ -139,9 +139,9 @@ body.dark-theme {
 }
 
 
+
 .dark-theme .nav__menu,
 .dark-theme .nav__img,
-
 .dark-theme .value__img,
 .dark-theme .contact__img,
 .dark-theme .contact__card-box:hover {
@@ -150,17 +150,18 @@ body.dark-theme {
 
 
 .dark-theme .contact__container,
-.dark-theme .contact__card i,
-.dark-theme .contact__card-button{
+.dark-theme .contact__card,
+.dark-theme .contact__card-button {
   background-color: var(--container-color);
 }
 
-.dark-theme .contact__card-button,
 
-
+.dark-theme .nav__menu {
+  color: var(--title-color);
+}
 
 .dark-theme .nav__logo {
-  color: var(--first-color);
+  color: var(--title-color);
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -300,7 +301,7 @@ nav__logo:hover {
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 0;
-  background-color:var(--container-color);
+  background-color: var(--container-color);
 }
 
 .home__container {
@@ -318,31 +319,20 @@ nav__logo:hover {
   font-size: var(--biggest-font-size);
   margin-bottom: 1.5rem;
 }
-.home__img{
+
+.home__img {
   position: relative;
-  top: 70px; left: 70px;
+  top: 70px;
+  left: 70px;
 }
 
-.nav__logo{
+.nav__logo {
   position: relative;
-  top: 20px; bottom: -50px;
+  top: 20px;
+  bottom: -50px;
 }
 
 .
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*=============== TEAM ===============*/
 
 
@@ -369,6 +359,7 @@ nav__logo:hover {
 }
 
 /*=============== PROPERTY ===============*/
+
 .property__container {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -382,7 +373,6 @@ nav__logo:hover {
   overflow: hidden;
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, 0.25);
 }
-
 
 
 
@@ -586,9 +576,8 @@ input[type=submit]:hover {
 }
 
 /* Style the container/contact section */
-.container {
+.contact__container {
   border-radius: 5px;
-
   padding: 10px;
 }
 
@@ -780,16 +769,23 @@ input[type=submit]:hover {
   .home__img {
     width: 200px;
     height: 200px;
+    
   }
 
   .home__scroll {
     display: none;
+  
   }
 
+  
+  .contact__title{
+    font-size: var(--h1-font-size);
+    
+  }
 
-
-
-
+  .contact__container{
+    grid-template-columns: minmax(0, 80%);
+  }
 
 
   .buying__container {
@@ -837,7 +833,7 @@ input[type=submit]:hover {
     font-size: 1.5rem;
   }
 
-  .nav__img {
+  .nav__logo {
     width: 35px;
   }
 
@@ -848,6 +844,8 @@ input[type=submit]:hover {
   .home__img {
     width: 150px;
     height: 150px;
+    align-items: center;
+    
   }
 
   .home__scroll {
@@ -869,20 +867,15 @@ input[type=submit]:hover {
     flex-wrap: wrap;
     padding: 40px 0;
   }
-  .team__row-2{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-  }
-  .team__row-3{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
 
+  .team__row-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
   }
-  .team__row-4{
+
+  .team__row-3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -890,13 +883,18 @@ input[type=submit]:hover {
 
   }
 
+  .team__row-4 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
 
+  }
 
-
-
-
-
-
+  .property__title{
+    font-size: var(--h1-font-size);
+    justify-content: center;
+  }
 
   .sellers__container {
     padding-bottom: 3rem;
@@ -925,7 +923,6 @@ input[type=submit]:hover {
   }
 
 
-
   .subscribe__container {
     padding: 2rem 1rem;
   }
@@ -939,6 +936,10 @@ input[type=submit]:hover {
 @media screen and (min-width: 576px) {
   .nav__menu {
     width: 325px;
+  }
+
+  .nav__logo{
+    width: 100px;
   }
 
 
@@ -955,7 +956,6 @@ input[type=submit]:hover {
     height: 400px;
 
   }
-
 
   .home__search {
     width: 412px;
@@ -982,20 +982,23 @@ input[type=submit]:hover {
     flex-wrap: wrap;
     padding: 40px 0;
   }
-  .team__row-2{
+
+  .team__row-2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 40px 0;
   }
-  .team__row-3{
+
+  .team__row-3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 40px 0;
 
   }
-  .team__row-4{
+
+  .team__row-4 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -1006,6 +1009,7 @@ input[type=submit]:hover {
   .team__member {
     width: 342px;
   }
+  
 
 
 
@@ -1015,6 +1019,7 @@ input[type=submit]:hover {
     grid-template-columns: repeat(3, max-content);
   }
 }
+
 /* For desktop devices */
 @media screen and (min-width: 768px) {
 
@@ -1023,18 +1028,24 @@ input[type=submit]:hover {
     margin-right: auto;
   }
 
-  .nav__menu{
+  .nav__menu {
     width: 800px;
-
   }
+
+  .nav__logo{
+    width: 200px;
+  }
+
   .nav__list {
     display: flex;
     padding-top: initial;
   }
-  .nav__item{
+
+  .nav__item {
     margin-left: 6rem;
   }
-  .nav__toggle{
+
+  .nav__toggle {
     display: none;
   }
 
@@ -1063,13 +1074,19 @@ input[type=submit]:hover {
     padding-bottom: 2rem;
   }
 
-  .home__img{
+  .home__img {
     width: 600px;
     height: 600px;
+    display: flex;
+    justify-content: left;
+    padding: 40px;
   }
-  .img{
-    width: 600px;
-    height: 600px;
+
+  .team__card{
+    width: 342px;
+  }
+  .team__member{
+    width: 342px;
   }
 
   .team__row-1 {
@@ -1078,20 +1095,23 @@ input[type=submit]:hover {
     flex-wrap: wrap;
     padding: 40px 0;
   }
-  .team__row-2{
+
+  .team__row-2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 40px 0;
   }
-  .team__row-3{
+
+  .team__row-3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 40px 0;
 
   }
-  .team__row-4{
+
+  .team__row-4 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -1112,8 +1132,8 @@ input[type=submit]:hover {
 }
 
 /* For large devices */
-
-@media screen and (min-width: 1024px){
+/*Desktops*/
+@media screen and (min-width: 1024px) {
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -1144,10 +1164,11 @@ input[type=submit]:hover {
     padding-bottom: 2rem;
   }
 
-  .home__img{
+  .home__img {
     position: relative;
-    width: 2600px;
-    height: 1600px;
+    width: 600px;
+    height: 500px;
+    margin-left: -13rem ;
   }
 }
 
@@ -1157,17 +1178,20 @@ input[type=submit]:hover {
     margin-right: auto;
   }
 
-  .nav__menu{
+  .nav__menu {
     width: 800px;
   }
+
   .nav__list {
     display: flex;
     padding-top: initial;
   }
-  .nav__item{
+
+  .nav__item {
     margin-left: 6rem;
   }
-  .nav__toggle{
+
+  .nav__toggle {
     display: none;
   }
 
@@ -1193,11 +1217,22 @@ input[type=submit]:hover {
   }
 
   .home__img {
-    width: 3800px;
-    height: 2000px;
+    width: 600px;
+    height:700px;
     text-align: left;
-    display:block;
-
+    display: block;
+  }
+  .home__title{
+    text-align: center;
+    display: block;
+  }
+  .home__data{
+    text-align: center;
+    display: block;
+  }
+  .home__description{
+    display: block;
+    text-align: left;
   }
 
 
@@ -1221,13 +1256,15 @@ input[type=submit]:hover {
     flex-wrap: wrap;
     padding: 40px 0;
   }
-  .team__row-2{
+
+  .team__row-2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 40px 0;
   }
-  .team__row-3{
+
+  .team__row-3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
