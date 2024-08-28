@@ -79,7 +79,7 @@ h2 {
 }
 
 p {
-  color: var();
+  color: var(--body-color);
 }
 
 ul {
@@ -132,6 +132,7 @@ body.dark-theme {
 .dark-theme .home__container {
   background-color: var(--container-color);
 }
+
 .dark-theme .home__search,
 .dark-theme .swiper-button-next,
 .dark-theme .swiper-button-prev {
@@ -333,8 +334,51 @@ nav__logo:hover {
 }
 
 .
-/*=============== TEAM ===============*/
 
+/*=============== TEAM ===============*/
+.team__container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 equal columns */
+  grid-template-rows: repeat(4, 1fr);
+  /* 4 equal rows */
+  gap: 1rem;
+  /* Space between grid items */
+}
+
+.team__member {
+  text-align: center;
+  padding: 1rem;
+  background-color: #a9a2a2;
+  border-radius: 5px;
+}
+
+.team__img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+  /* Rounded top corners */
+}
+
+.team__name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.team__title {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive design (for smaller screens) */
+@media (max-width: 768px) {
+  .team__container {
+    grid-template-columns: repeat(2, 1fr);
+    /* Reduce to 2 columns */
+  }
+}
 
 /*=============== BUTTON ===============*/
 .button {
@@ -739,7 +783,12 @@ input[type=submit]:hover {
 /* Show Scroll Up*/
 
 /*=============== BREAKPOINTS ===============*/
-/* For small devices */
+/* Ensure visited links stay purple */
+a:visited {
+  color: #ffffff;
+}
+
+
 @media screen and (max-width: 350px) {
   .container {
     margin-left: 1rem;
@@ -769,41 +818,32 @@ input[type=submit]:hover {
   .home__img {
     width: 200px;
     height: 200px;
-    
   }
 
   .home__scroll {
     display: none;
-  
   }
 
-  
-  .contact__title{
+  .contact__title {
     font-size: var(--h1-font-size);
-    
   }
 
-  .contact__container{
+  .contact__container {
     grid-template-columns: minmax(0, 80%);
   }
-
 
   .buying__container {
-    grid-template-columns: minmax(0, 80%);
+    grid-template-columns: 1fr;
   }
 
   .buying__img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
   }
 
   .buying__description {
-    font-size: var(--small-font-size);
-    margin-bottom: 2.5rem;
-
+    font-size: 14px;
   }
-
-
 
   .sellers__container {
     padding-bottom: 3rem;
@@ -845,7 +885,6 @@ input[type=submit]:hover {
     width: 150px;
     height: 150px;
     align-items: center;
-    
   }
 
   .home__scroll {
@@ -861,37 +900,7 @@ input[type=submit]:hover {
     height: 150px;
   }
 
-  .team__row-1 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-  }
-
-  .team__row-2 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-  }
-
-  .team__row-3 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-
-  }
-
-  .team__row-4 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-
-  }
-
-  .property__title{
+  .property__title {
     font-size: var(--h1-font-size);
     justify-content: center;
   }
@@ -922,7 +931,6 @@ input[type=submit]:hover {
     padding: 0;
   }
 
-
   .subscribe__container {
     padding: 2rem 1rem;
   }
@@ -938,11 +946,9 @@ input[type=submit]:hover {
     width: 325px;
   }
 
-  .nav__logo{
+  .nav__logo {
     width: 100px;
   }
-
-
 
   .home__container {
     grid-template-columns: repeat(2, 1fr);
@@ -950,11 +956,9 @@ input[type=submit]:hover {
     column-gap: 2rem;
   }
 
-
   .home__img {
     width: 400px;
     height: 400px;
-
   }
 
   .home__search {
@@ -966,54 +970,19 @@ input[type=submit]:hover {
     text-align: initial;
   }
 
-  .team__container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    column-gap: 2rem;
+  /* Tablet Styles */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .buying__container {
+      grid-template-columns: 1fr;
+    }
+
+    .buying__img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Other tablet styles */
   }
-
-  .team__card {
-    width: 342px;
-  }
-
-  .team__row-1 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-  }
-
-  .team__row-2 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-  }
-
-  .team__row-3 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-
-  }
-
-  .team__row-4 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-
-  }
-
-  .team__member {
-    width: 342px;
-  }
-  
-
-
-
-
 
   .footer__content {
     grid-template-columns: repeat(3, max-content);
@@ -1022,7 +991,6 @@ input[type=submit]:hover {
 
 /* For desktop devices */
 @media screen and (min-width: 768px) {
-
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -1032,7 +1000,7 @@ input[type=submit]:hover {
     width: 800px;
   }
 
-  .nav__logo{
+  .nav__logo {
     width: 200px;
   }
 
@@ -1082,44 +1050,14 @@ input[type=submit]:hover {
     padding: 40px;
   }
 
-  .team__card{
-    width: 342px;
-  }
-  .team__member{
-    width: 342px;
+  .team__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 
-  .team__row-1 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
+  .team__member {
+    /* Mobile-specific styles */
   }
-
-  .team__row-2 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-  }
-
-  .team__row-3 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-
-  }
-
-  .team__row-4 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-
-  }
-
-
 
   .subscribe__container {
     padding: 3rem 13rem;
@@ -1130,6 +1068,21 @@ input[type=submit]:hover {
     justify-content: space-between;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* For large devices */
 /*Desktops*/
@@ -1168,8 +1121,17 @@ input[type=submit]:hover {
     position: relative;
     width: 600px;
     height: 500px;
-    margin-left: -13rem ;
+    margin-left: -13rem;
   }
+
+  .team__container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -1218,59 +1180,35 @@ input[type=submit]:hover {
 
   .home__img {
     width: 600px;
-    height:700px;
+    height: 700px;
     text-align: left;
     display: block;
   }
-  .home__title{
+
+  .home__title {
     text-align: center;
     display: block;
   }
-  .home__data{
+
+  .home__data {
     text-align: center;
     display: block;
   }
-  .home__description{
+
+  .home__description {
     display: block;
     text-align: left;
-  }
-
-
-
-  .team {
-    padding-bottom: 0;
   }
 
   .team__container {
-    grid-template-columns: repeat(2, 1fr);
-    padding-top: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
   }
 
-  .team__data {
-    padding-bottom: 4rem;
-  }
 
-  .team__row-1 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-  }
 
-  .team__row-2 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-  }
 
-  .team__row-3 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-
-  }
 
 
 

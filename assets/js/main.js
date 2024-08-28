@@ -21,6 +21,7 @@ window.addEventListener("scroll", scrollHeader);
 
 
 
+
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
 
@@ -41,6 +42,7 @@ const scrollActive = () =>{
   })
 }
 window.addEventListener('scroll', scrollActive)
+
 
 
 /*=============== DARK LIGHT THEME ===============*/
@@ -96,6 +98,7 @@ sr.reveal(
     origin: "left",
   }
 
+  
 
 )
 
