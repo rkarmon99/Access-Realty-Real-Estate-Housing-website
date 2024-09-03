@@ -333,7 +333,7 @@ nav__logo:hover {
   bottom: -50px;
 }
 
-.
+
 
 /*=============== TEAM ===============*/
 .team__container {
@@ -1129,11 +1129,6 @@ a:visited {
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
   }
-
-  
-
-  
-
 }
 
 @media screen and (min-width: 1440px) {
@@ -1207,13 +1202,5 @@ a:visited {
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
   }
-
-
-
-
-
-
-
-
 
 }
