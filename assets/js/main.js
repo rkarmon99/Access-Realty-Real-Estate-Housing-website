@@ -104,7 +104,7 @@ sr.reveal(
 
 
 sr.reveal(
-  ".home__title , .about__container , .popular__container , .subscribe__container , .buyers__container , .sellers__container , .footer__container  "
+  ".home__title , .about__container ,  .subscribe__container , .buyers__container , .sellers__container , .footer__container  "
 
 );
 sr.reveal(".home__description , .footer__info", { delay: 500 });

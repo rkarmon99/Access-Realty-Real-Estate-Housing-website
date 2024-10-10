@@ -12,7 +12,7 @@
   --first-color-lighten: hsl(228, 100%, 97%);
   --title-color: hsl(194, 76%, 36%);
   --second-color: hsl(194, 21%, 55%);
-  --text-color: hsl(240, 100%, 49%);
+  --text-color: hsl(0, 0%, 100%);
   --text-color-light: hsl(0, 0%, 85%);
   --border-color: hsl(228, 99%, 98%);
   --body-color: #ffffff;
@@ -39,8 +39,8 @@
 
 @media screen and (min-width: 1024px) {
   :root {
-    --biggest-font-size: 4rem;
-    --h1-font-size: 2.25rem;
+
+    --h1-font-size: 5rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
@@ -143,9 +143,7 @@ body.dark-theme {
 
 .dark-theme .nav__menu,
 .dark-theme .nav__img,
-.dark-theme .value__img,
-.dark-theme .contact__img,
-.dark-theme .contact__card-box:hover {
+.dark-theme .value__img {
   box-shadow: none;
 }
 
@@ -162,7 +160,7 @@ body.dark-theme {
 }
 
 .dark-theme .nav__logo {
-  color: var(--title-color);
+  color: var(--);
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -214,10 +212,11 @@ body.dark-theme {
 
 .nav {
   height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
+ 
+  justify-content: flex-start;
   align-items: center;
   color: var(--first-color);
+   margin-top: 2rem ;
 }
 
 .nav__logo {
@@ -245,7 +244,7 @@ nav__logo:hover {
     width: 90%;
     left: 0;
     right: 0;
-    margin: 0 auto;
+    margin-top: 2rem ;
     padding: 1.3rem, 3rem;
     border-radius: 1.25rem;
     transition: 0.4s;
@@ -255,6 +254,7 @@ nav__logo:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+     
   }
 
   .nav__link {
@@ -262,6 +262,7 @@ nav__logo:hover {
     display: flex;
     padding: 0.5rem;
     border-radius: 50%;
+    
   }
 
   .nav__link i {
@@ -284,7 +285,7 @@ nav__logo:hover {
 }
 
 .scroll-header .change-theme {
-  color: var(--title-color);
+  color: #fff;
 }
 
 /* Active link */
@@ -314,7 +315,10 @@ nav__logo:hover {
   /* Existing styles for the home data section */
   text-align: center;
 }
-
+.home__description{
+  position: relative;
+  padding-left: 9rem;
+}
 .home__title {
   /* Existing styles for the home title section */
   font-size: var(--biggest-font-size);
@@ -323,8 +327,8 @@ nav__logo:hover {
 
 .home__img {
   position: relative;
-  top: 70px;
-  left: 70px;
+  top: 40px;
+  left: 90px;
 }
 
 .nav__logo {
@@ -409,6 +413,7 @@ nav__logo:hover {
   gap: 2rem;
 }
 
+
 .property__card {
   position: relative;
   background-color: var(--container-color);
@@ -418,56 +423,31 @@ nav__logo:hover {
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, 0.25);
 }
 
-
-
-.property__img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  position: absolute;
-  border-radius: 10px 100px / 120px;
-  overflow: hidden;
-  box-shadow: fit;
-  transition: 0.3s;
-  align-items: center;
+.property__img-1{
+  position: relative;
+  top: -2rem;
+  left: -2rem;
 }
-
-
+.property__img-2{
+  position: relative;
+  top: -2rem;
+  left: -2rem;
+}
 
 .property__data {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
+  position: relative;
+  top: -2rem;
+  left: -2rem;
 }
-
 .property__title {
   font-size: var(--h3-font-size);
-  font-weight: var(--font-semi-bold);
-  margin-bottom: 0.25rem;
+  margin-top: 2rem;
 }
-
-
-.property__description {
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
-  margin-bottom: 0.5rem;
-  display: flex-end;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: 1rem;
-
+.property__description{
+  position: relative;
+  top: -2rem;
+  left: -2rem;
 }
-
-
-
-
-
-
-
 
 
 /*=============== BUYING ===============*/
@@ -495,8 +475,6 @@ nav__logo:hover {
   font-size: var(--small-font-size);
   margin-bottom: 2.5rem;
 }
-
-
 
 
 
@@ -591,64 +569,20 @@ nav__logo:hover {
 
 /*=============== CONTACT ===============*/
 
-* {
-  box-sizing: border-box;
-}
-
-/* Style inputs */
-input[type=text],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-/* Style the container/contact section */
-.contact__container {
-  border-radius: 5px;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: rgb(176, 190, 197);
   padding: 10px;
 }
-
-/* Create two columns that float next to eachother */
-.column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
+.grid-item {
+  background-color: rgb(204, 240, 239, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
+  font-size: 20px;
+  text-align: center;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-
-  .column,
-  input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
 
 
 
@@ -787,209 +721,29 @@ input[type=submit]:hover {
 a:visited {
   color: #ffffff;
 }
+/*=============== MEDIA QUERIES ===============*/
+/* For large devices */
 
 
-@media screen and (max-width: 350px) {
-  .container {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
 
-  .section {
-    padding: 3.5rem 0 1rem;
-  }
-
-  .home {
-    padding-bottom: 0;
-  }
-
-  .home__container {
-    grid-template-columns: minmax(0, 80%);
-  }
-
-  .home__data {
-    text-align: center;
-  }
-
-  .home__title {
-    font-size: var(--h1-font-size);
-  }
-
-  .home__img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .home__scroll {
-    display: none;
-  }
-
-  .contact__title {
-    font-size: var(--h1-font-size);
-  }
-
-  .contact__container {
-    grid-template-columns: minmax(0, 80%);
-  }
-
-  .buying__container {
-    grid-template-columns: 1fr;
-  }
-
-  .buying__img {
-    width: 100%;
-    height: auto;
-  }
-
-  .buying__description {
-    font-size: 14px;
-  }
-
-  .sellers__container {
-    padding-bottom: 3rem;
-  }
-
-  .contact_container {
-    grid-template-columns: minmax(0, 80%);
-  }
-
-  .contact__card {
-    grid-template-columns: repeat(1, 180px);
-    justify-content: center;
-  }
-
-  .contact__button {
-    margin-top: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .nav__menu {
-    padding: 1.3rem 1.5rem;
-  }
-
-  .nav__close,
-  .nav__toggle {
-    font-size: 1.5rem;
-  }
-
-  .nav__logo {
-    width: 35px;
-  }
-
-  .home__container {
-    grid-template-columns: minmax(0, 90%);
-  }
-
-  .home__img {
-    width: 150px;
-    height: 150px;
-    align-items: center;
-  }
-
-  .home__scroll {
-    display: none;
-  }
-
-  .buying__container {
-    grid-template-columns: minmax(0, 90%);
-  }
-
-  .buying__img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .property__title {
-    font-size: var(--h1-font-size);
-    justify-content: center;
-  }
-
-  .sellers__container {
-    padding-bottom: 3rem;
-  }
-
-  .sellers__square {
-    width: 240px;
-    height: 264px;
-  }
-
-  .sellers__description {
-    padding: 0;
-  }
-
-  .sellers__img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .sellers__information-list {
-    padding: 0;
-  }
-
-  .sellers__information-item {
-    padding: 0;
-  }
-
-  .subscribe__container {
-    padding: 2rem 1rem;
-  }
-
-  .footer__content {
-    gap: 2.5rem;
-  }
-}
-
-/* For medium devices */
-@media screen and (min-width: 576px) {
-  .nav__menu {
-    width: 325px;
-  }
-
-  .nav__logo {
-    width: 100px;
-  }
-
-  .home__container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    column-gap: 2rem;
-  }
-
-  .home__img {
-    width: 400px;
-    height: 400px;
-  }
-
-  .home__search {
-    width: 412px;
-  }
-
-  .home__data {
-    padding-top: 8rem;
-    text-align: initial;
-  }
-
-  /* Tablet Styles */
-  @media (max-width: 1023px) and (min-width: 768px) {
-    .buying__container {
-      grid-template-columns: 1fr;
-    }
-
-    .buying__img {
-      width: 100%;
-      height: auto;
-    }
-
-    /* Other tablet styles */
-  }
-
-  .footer__content {
-    grid-template-columns: repeat(3, max-content);
-  }
-}
 
 /* For desktop devices */
+@media screen and (max-width: 1200px){
+  .nav__menu {
+    width: 60%;
+  }
+  .nav__list {
+    column-gap: .5rem;
+  }
+  .home__data{
+    padding-left: 1rem;
+  }
+  
+}
+
+
+
+/* For tablet devices */
 @media screen and (min-width: 768px) {
   .container {
     margin-left: auto;
@@ -1059,6 +813,26 @@ a:visited {
     /* Mobile-specific styles */
   }
 
+  residential-heading {
+    margin-right: -3px;
+    padding-right: 38px;
+    text-align: center;
+  }
+
+  .commercial-heading {
+    margin-left: -1px;
+    text-align: center;
+  }
+
+  .buying__container {
+    grid-template-columns: 1fr;
+  }
+
+  .buying__img {
+    width: 100%;
+    height: auto;
+  }
+
   .subscribe__container {
     padding: 3rem 13rem;
   }
@@ -1076,62 +850,8 @@ a:visited {
 
 
 
-
-
-
-
-
-
-
-
-/* For large devices */
-/*Desktops*/
-@media screen and (min-width: 1024px) {
-  .container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .section {
-    padding: 10rem 0 2rem;
-  }
-
-  .section__title {
-    font-size: 3rem;
-  }
-
-  .section__subtitle {
-    font-size: var(--normal-font-size);
-  }
-
-  .home__container {
-    grid-template-columns: repeat(2, 1fr);
-    padding-top: 2rem;
-  }
-
-  .home__square {
-    align-self: flex-end;
-  }
-
-  .home__data {
-    padding-bottom: 2rem;
-  }
-
-  .home__img {
-    position: relative;
-    width: 600px;
-    height: 500px;
-    margin-left: -13rem;
-  }
-
-  .team__container {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 1rem;
-  }
-}
-
-@media screen and (min-width: 1440px) {
+/* For small devices */
+@media screen and (min-width: 320px) {
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -1139,11 +859,19 @@ a:visited {
 
   .nav__menu {
     width: 800px;
+    
+  }
+  
+
+  .nav__logo {
+    width: 100px;
   }
 
   .nav__list {
     display: flex;
     padding-top: initial;
+    column-gap: .5rem;
+    spacing
   }
 
   .nav__item {
@@ -1168,39 +896,19 @@ a:visited {
 
   .home__container {
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 5rem;
+    padding-top: 2rem;
+  }
+
+  .home__square {
+    align-self: flex-end;
   }
 
   .home__data {
-    padding-bottom: 9rem;
+    padding-bottom: 2rem;
   }
-
-  .home__img {
-    width: 600px;
-    height: 700px;
-    text-align: left;
-    display: block;
-  }
-
-  .home__title {
-    text-align: center;
-    display: block;
-  }
-
-  .home__data {
-    text-align: center;
-    display: block;
-  }
-
-  .home__description {
-    display: block;
-    text-align: left;
-  }
-
-  .team__container {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 1rem;
-  }
-
 }
+
+
+
+
+
