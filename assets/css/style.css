@@ -735,6 +735,18 @@ a:visited {
   .nav__list {
     column-gap: .5rem;
   }
+  .nav__link {
+    padding: 0.25rem;
+  }
+  .nav__close,
+  .nav__toggle {
+    display: initial;
+  }
+  .nav__img {
+    width: 100px;
+  }
+
+  
   .home__data{
     padding-left: 1rem;
   }
@@ -743,7 +755,7 @@ a:visited {
 
 
 
-/* For tablet devices */
+/* For desktop/tablet devices */
 @media screen and (min-width: 768px) {
   .container {
     margin-left: auto;
@@ -760,12 +772,13 @@ a:visited {
 
   .nav__list {
     display: flex;
-    padding-top: initial;
+    padding-top: 0;
   }
 
   .nav__item {
-    margin-left: 6rem;
+    margin-left: 2rem;
   }
+  
 
   .nav__toggle {
     display: none;
@@ -797,8 +810,7 @@ a:visited {
   }
 
   .home__img {
-    width: 600px;
-    height: 600px;
+    
     display: flex;
     justify-content: left;
     padding: 40px;
