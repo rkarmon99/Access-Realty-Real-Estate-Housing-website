@@ -24,25 +24,18 @@
   <!--==================== HEADER ====================-->
   <header class="header" id="header">
     <nav class="nav container">
-      <a href=" #" class="nav__logo"> <img src="./assets/img/logo.png" alt=""></a>
-      <div class="nav__menu">
+      <nav class="nav__logo">
+        <img src ="./assets/img/logo.png" class="nav__logo">
+      </nav>
+
+      <div class="nav__menu" id="nav-menu">
+
+
         <ul class="nav__list">
           <li class="nav__item">
             <a href="index.html" class="nav__link">
               <i class='bx bx-home-alt-2'></i>
               <span>Home</span>
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="team.html" class="nav__link ">
-              <i class='bx bxs-group'></i>
-              <span>Team </span>
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="property.html" class="nav__link ">
-              <i class='bx bxl-product-hunt'></i>
-              <span>Property Management</span>
             </a>
           </li>
           <li class="nav__item">
@@ -58,18 +51,34 @@
             </a>
           </li>
           <li class="nav__item">
-            <a href="contact.html" class="nav__link">
-              <i class='bx bx-phone'></i>
-              <span>Contact </span>
+            <a href="property.html" class="nav__link ">
+              <i class='bx bxl-product-hunt'></i>
+              <span>Property Management</span>
             </a>
           </li>
 
+          <li class="nav__item">
+            <a href="team.html" class="nav__link ">
+              <i class='bx bxs-group'></i>
+              <span> Our Team </span>
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link">
+              <i class='bx bx-phone'></i>
+              <span>Contact Us </span>
+            </a>
+          </li>
+
+
         </ul>
       </div>
-      <!-- Theme changing button -->
-      <i class='bx bx-moon change-theme' id="theme-button"></i>
+
 
     </nav>
+    <!-- Theme changing button -->
+    <i class='bx bx-moon change-theme' id="theme-button"></i>
   </header>
 
   <!--==================== MAIN ====================-->
@@ -78,80 +87,77 @@
     <section class="team section" id="team">
       <h2 class="section__title">Team</h2>
       <section class="team">
-        <div class="team__container container grid">
-          <div class="team__member">
-            <img src="path/to/member1.jpg" alt="Member 1" class="team__img">
-            <h3 class="team__name">Rocky Herman</h3>
-            <p class="team__title">Principle & Broker</p>
-            <p class="info">Cell: 501-240-9172</p>
+        <div class="team__grid-container">
+          <div class="team__grid-item">
+            <h3>Rocky Herman</h3>
+            <h4>Principle & Broker</h4>
+            <p>501-240-9172</p>
             <p>rockyherman2002@yahoo.com</p>
           </div>
-          <div class="team__member">
-            <img src="path/to/member2.jpg" alt="Member 2" class="team__img">
-            <h3 class="team__name">Myra Hardimon</h3>
-            <p class="team__title">Executive Broker</p>
-            <p class="info">Cell: 501-416-1736</p>
+
+          <div class="team__grid-item">
+            <h3>Myra Hardimon</h3>
+            <h4>Executive Broker</h4>
+            <p>501-416-1736</p>
             <p>mlhbdc@aol.com</p>
           </div>
-          <div class="team__member">
-            <img src="path/to/member3.jpg" alt="Member 3" class="team__img">
-            <h3 class="team__name">Paul Amponsah</h3>
-            <p class="team__title">Agent</p>
-            <p class="info">Cell: 501-264-8053</p>
-            <p>pamponsah@gmail.com</p>
+
+          <div class="team__grid-item">
+            <h3>Paul Amponsah</h3>
+            <h4>Executive Broker</h4>
+            <p>501- 264-8053</p>
+            <p>pamposah@gmail.com</p>
           </div>
-          <div class="team__member">
-            <img src="path/to/member4.jpg" alt="Member 4" class="team__img">
-            <h3 class="team__name">Robert Jones</h3>
-            <p class="team__title">Agent</p>
-            <p class="info">Cell: 501-240-5650</p>
+
+          <div class="team__grid-item">
+            <h3>Robert Jones</h3>
+            <h4>Agent</h4>
+            <p>501- 240-5650</p>
             <p>Robertjones5145@sbcglobal.net</p>
           </div>
-          <div class="team__member">
-            <img src="path/to/member5.jpg" alt="Member 5" class="team__img">
-            <h3 class="team__name">Dwight Harshaw</h3>
-            <p class="team__title">Agent</p>
-            <p class="info">Cell: 501-681-2688</p>
+
+          <div class="team__grid-item">
+            <h3>Dwight Harshaw</h3>
+            <h4>Agent</h4>
+            <p>501-681-2688</p>
             <p>dwight.harshaw@gmail.com</p>
           </div>
-          <div class="team__member">
-            <img src="path/to/member6.jpg" alt="Member 6" class="team__img">
-            <h3 class="team__name">Jon-Michael Herman</h3>
-            <p class="team__title">Agent</p>
-            <p class="info">Cell: 501-247-8510</p>
+
+          <div class="team__grid-item">
+            <h3>Jon-Michael Herman</h3>
+            <h4>Agent</h4>
+            <p>501-247-8510</p>
             <p>JHERMANRealty@gmail.com</p>
           </div>
-          <div class="team__member">
-            <img src="path/to/member7.jpg" alt="Member 7" class="team__img">
-            <h3 class="team__name">Crystal Ray-Herman</h3>
-            <p class="team__title">Team Title</p>
-            <p class="info">Cell: 917-562-1255</p>
-            <P>dianneq44@gmail.com</P>
+
+          <div class="team__grid-item">
+            <h3>Crystal Ray-Herman</h3>
+            <h4>Agent</h4>
+            <p>917-562-1255</p>
+            <p>dianneq44@gmail.com
+            <p>
           </div>
-          <div class="team__member">
-            <img src="path/to/member8.jpg" alt="Member 8" class="team__img">
-            <h3 class="team__name">Jessica Jenkins</h3>
-            <p class="team__title">Agent</p>
-            <p class="info">Cell: 501-786-7812</p>
+
+          <div class="team__grid-item">
+            <h3>Jessica Jenkins</h3>
+            <h4>Agent</h4>
+            <p>501-786-7812</p>
             <p>J.Jenkins15@yahoo.com</p>
           </div>
-          <div class="team__member">
-            <img src="path/to/member9.jpg" alt="Member 9" class="team__img">
-            <h3 class="team__name">Maurice Porter</h3>
-            <p class="team__title">Agent</p>
-            <p class="info">Cell: 501-708-6922</p>
-            <p>mauriceporterc21@gmail.com</p>
-          </div>
-          <div class="team__member">
-            <img src="path/to/member10.jpg" alt="Member 10" class="team__img">
-            <h3 class="team__name">Maurice Porter</h3>
-            <p class="team__title">Agent</p>
-            <p class="info">Cell: 501-708-6922</p>
-            <p>mauriceporterc21@gmail.com</p>
-          </div>
-          
 
-          <!-- Repeat the team__member div for each member -->
+          <div class="team__grid-item">
+            <h3>Maurice Porter</h3>
+            <h4>Agent</h4>
+            <p>501-708-6922</p>
+            <p>mauriceporterc21@gmail.com</p>
+          </div>
+
+          <div class="team__grid-item">
+            <h3>Victor Wynn, Sr.</h3>
+            <h4>Agent</h4>
+            <p>501-804-0071</p>
+            <p>victorwynn@yahoo.com</p>
+          </div>
         </div>
 
 
